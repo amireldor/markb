@@ -22,10 +22,7 @@ def main():
 
         tempfile = NamedTemporaryFile(mode="w+", delete=False)
         tempfile.write(html)
-
-        print("FILE IFLE ILFE", tempfile.name)
         webbrowser.open("file://{}".format(tempfile.name))
-
 
     except FileNotFoundError:
         print('File not found "{filename}"'.format(filename=args.filename))
