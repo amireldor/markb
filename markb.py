@@ -1,9 +1,9 @@
-# oh hi mark!
-# hi lisa
-#
-# Get a markdown file via argument or stdin and output to a tempfile. Open with
-# browser. Fun!
+#!/usr/bin/env python3
+# mdbro
+# Get a markdown file via argument and output to a tempfile.
+# Open automatically with browser. Fun!
 # License: WTFPL
+
 from argparse import ArgumentParser
 from markdown import markdown
 from tempfile import NamedTemporaryFile
@@ -11,8 +11,9 @@ import webbrowser
 
 
 def main():
-    parser = ArgumentParser(description="Temporary render markdown files to a "
-                                        "temporary file and open in the (your!) browser")
+    description = """Render markdown files to
+    a temporary file and open it in a browser (YOUR browser!)"""
+    parser = ArgumentParser(description=description)
     parser.add_argument("filename", help="A markdown file")
     args = parser.parse_args()
 
@@ -30,4 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
