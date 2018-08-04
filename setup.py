@@ -13,6 +13,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/amireldor/markb",
     packages=setuptools.find_packages(),
+    install_requires = [
+        "markdown"
+    ],
     classifiers=(
         "Development Status :: 4 - Beta",
         "Environment :: Console",
