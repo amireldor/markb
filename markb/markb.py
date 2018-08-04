@@ -2,7 +2,6 @@
 # mdbro
 # Get a markdown file via argument and output to a tempfile.
 # Open automatically with browser. Fun!
-# License: WTFPL
 
 from argparse import ArgumentParser
 from markdown import markdown
