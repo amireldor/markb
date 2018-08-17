@@ -20,7 +20,7 @@ def main():
         with open(args.filename) as md:
             html = markdown(md.read())
 
-        tempfile = NamedTemporaryFile(mode="w+", delete=False)
+        tempfile = NamedTemporaryFile(mode="w+", delete=False, suffix=".html")
         tempfile.write(html)
         webbrowser.open("file://{}".format(tempfile.name))
 
