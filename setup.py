@@ -5,7 +5,7 @@ with open("README.md") as readme:
 
 setuptools.setup(
     name="markb",
-    version="0.1.26",
+    version="0.1.27",
     author="Amir Eldor",
     author_email="amir@eize.ninja",
     description="Render a markdown file and open in a browser",
