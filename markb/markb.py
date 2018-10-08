@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# mdbro
+# markb
 # Get a markdown file via argument and output to a tempfile.
 # Open automatically with browser. Fun!
 
