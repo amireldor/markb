@@ -13,7 +13,10 @@ def main():
     description = """Render markdown files to
     a temporary file and open it in a browser (YOUR browser!)"""
     parser = ArgumentParser(description=description)
-    parser.add_argument("filename", help="A markdown file")
+    parser.add_argument("filename",
+                        help="A markdown file",
+                        default="README.md",
+                        nargs="?")
     args = parser.parse_args()
 
     try:
