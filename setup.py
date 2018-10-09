@@ -1,11 +1,13 @@
 import setuptools
 
+from markb import __version__
+
 with open("README.md") as readme:
     long_description = readme.read()
 
 setuptools.setup(
     name="markb",
-    version="0.2.0",
+    version=__version__,
     author="Amir Eldor",
     author_email="amir@eize.ninja",
     description="Render a markdown file and open in a browser",

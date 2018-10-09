@@ -8,6 +8,8 @@ from markdown import markdown
 from tempfile import NamedTemporaryFile
 import webbrowser
 
+__version__ = "0.2.1"
+
 
 def main():
     description = """Render markdown files to
@@ -17,6 +19,8 @@ def main():
                         help="A markdown file",
                         default="README.md",
                         nargs="?")
+    parser.add_argument('-v', '--version', action='version',
+                        version='%(prog)s ' + __version__)
     args = parser.parse_args()
 
     try:
