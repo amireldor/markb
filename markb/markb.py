@@ -4,12 +4,24 @@
 # Open automatically with browser. Fun!
 
 from argparse import ArgumentParser
-from markdown import markdown
 from tempfile import NamedTemporaryFile
 import webbrowser
 
-__version__ = "0.2.1"
+from markdown import markdown
 
+__version__ = "0.2.2"
+
+class ReadmeFilenameNotDetected(Exception):
+    pass
+
+
+def detect_readme_filename(filenames):
+    for name in filenames:
+        substr_to_check = name[:6].lower()
+        if substr_to_check == "readme":
+            return name
+    
+    raise ReadmeFilenameNotDetected()
 
 def main():
     description = """Render markdown files to
