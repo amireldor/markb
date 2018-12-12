@@ -50,6 +50,7 @@ def main():
 
         tempfile = NamedTemporaryFile(mode="w+", delete=False, suffix=".html")
         tempfile.write(html)
+        tempfile.flush()
         webbrowser.open("file://{}".format(tempfile.name))
 
     except FileNotFoundError:
