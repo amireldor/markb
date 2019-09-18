@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# markb
+# markb.py
 # Get a markdown file via argument and output to a tempfile.
 # Open automatically with browser. Fun!
 
@@ -10,7 +9,7 @@ from os.path import isfile
 import webbrowser
 
 from markdown2 import markdown
-from .version import __version__
+from . import __version__
 
 
 class ReadmeFilenameNotDetected(Exception):
