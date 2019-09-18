@@ -10,7 +10,7 @@ setuptools.setup(
     version=__version__,
     author="Amir Eldor",
     author_email="amir@eize.ninja",
-    description="Render a markdown file and open in a browser",
+    description="Render a markdown file and open it in a browser",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/amireldor/markb",
