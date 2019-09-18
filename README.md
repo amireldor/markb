@@ -1,5 +1,4 @@
-markb
-=====
+# markb
 
 Render a markdown file and display it instantly in a browser.
 
@@ -8,9 +7,21 @@ opens a browser to view it. It was originally intended to quickly look at
 README files from cool cloned GitHub repositories.
 
     # attempt to use any file starting with README
-    markb  
+    markb
 
-    -- OR --    
+    -- OR --
 
     # invoke on a given file
-    markb post.md  
+    markb post.md
+
+## Development
+
+To develop stuff:
+
+    pip install -e .
+
+Make new release:
+
+    git tag <semver>
+
+Then sdist and all of the magic from here: [https://packaging.python.org/tutorials/packaging-projects/](https://packaging.python.org/tutorials/packaging-projects/)
