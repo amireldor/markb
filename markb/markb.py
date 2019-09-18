@@ -9,9 +9,9 @@ from os import listdir
 from os.path import isfile
 import webbrowser
 
-from markdown import markdown
+from markdown2 import markdown
+from .version import __version__
 
-__version__ = "0.2.4"
 
 class ReadmeFilenameNotDetected(Exception):
     pass
@@ -22,17 +22,18 @@ def detect_readme_filename(filenames):
         substr_to_check = name[:6].lower()
         if substr_to_check == "readme":
             return name
-    
+
     raise ReadmeFilenameNotDetected()
+
 
 def main():
     description = """Render markdown files to
     a temporary file and open it in a browser (YOUR browser!)"""
     parser = ArgumentParser(description=description)
-    parser.add_argument("filename",
-                        help="A markdown file",
-                        nargs="?")
-    parser.add_argument('-v', '--version', action='version',
+    parser.add_argument("filename", help="A markdown file", nargs="?")
+    parser.add_argument('-v',
+                        '--version',
+                        action='version',
                         version='%(prog)s ' + __version__)
     args = parser.parse_args()
 

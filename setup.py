@@ -1,13 +1,14 @@
 import setuptools
 
-from markb import __version__
+import versioneer
 
 with open("README.md") as readme:
     long_description = readme.read()
 
 setuptools.setup(
     name="markb",
-    version=__version__,
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     author="Amir Eldor",
     author_email="amir@eize.ninja",
     description="Render a markdown file and open it in a browser",
@@ -15,9 +16,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/amireldor/markb",
     packages=setuptools.find_packages(),
-    install_requires=[
-        "Markdown"
-    ],
+    install_requires=["markdown2 == 2.3.8"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",

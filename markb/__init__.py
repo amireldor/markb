@@ -1,2 +1,6 @@
-from .markb import main, __version__  # noqa
-__all__ = ["main"]
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
+
+from .markb import main
+__all__ = ["main", __version__]
