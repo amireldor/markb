@@ -16,7 +16,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/amireldor/markb",
     packages=setuptools.find_packages(),
-    install_requires=["markdown2 == 2.3.8"],
+    install_requires=["markdown2 == 2.4.0"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
